@@ -40,13 +40,18 @@ public class Main3 {
     // Simple example of Parallel - Pipeline
     // cities.stream().parallel().forEach(System.out::println);
 
-    cities.stream()
-        .filter(city -> city.startsWith("B"))
-        .forEach(System.out::println);
+    // cities.stream()
+    //     .filter(city -> city.startsWith("B"))
+    //     .forEach(System.out::println);
 
     // cities.stream()
     //     .filter(Main::filterCity) error
     //     .forEach(System.out::println);
+
+    cities.stream()
+    .filter(city -> city.startsWith("B"))
+    .filter(city -> city.contains("n"))
+    .forEach(System.out::println);
 
   }
 
